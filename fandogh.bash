@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 export TZ='Asia/tehran';
 
@@ -13,4 +14,3 @@ fi
 
 COLLECT_ERROR=True fandogh login --username=$PLUGIN_USERNAME --password=$PLUGIN_PASSWORD
 fandogh service apply -f $PLUGIN_MANIFEST_PATH -p VERSION=$PLUGIN_VERSION -d
-exit 0
