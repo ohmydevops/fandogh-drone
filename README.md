@@ -1,8 +1,8 @@
 # fandogh-drone
 
-If you are usin [Drone CI](https://drone.io/) and [Fandogh PaaS](https://fandogh.cloud/), you can use this drone plugin!
+If you are using [Drone CI](https://drone.io/) and [Fandogh PaaS](https://fandogh.cloud/), you can use this drone plugin!
 
-Example for [.drone.yml](https://docs.drone.io/pipeline/docker/overview/) file:
+Example for [.drone.yml](https://docs.drone.io/pipeline/docker/overview/):
 ```
 - name: update-fandogh
 
