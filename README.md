@@ -1,5 +1,7 @@
 # Fandogh Drone Plugin
 
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/amirbagh75/fandogh-drone)
+
 ![Screenshot](shot.png)
 
 If you are using [Drone CI](https://drone.io/) and [Fandogh PaaS](https://fandogh.cloud/), you can use this drone plugin!
