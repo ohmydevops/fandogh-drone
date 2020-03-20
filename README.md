@@ -1,4 +1,4 @@
-# fandogh-drone
+# Fandogh Drone Plugin
 
 ![Screenshot](shot.png)
 
