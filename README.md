@@ -20,4 +20,21 @@ Example for [.drone.yml](https://docs.drone.io/pipeline/docker/overview/):
   when:
     branch:
     - master
-```        
+```
+---
+Example for [fandogh.yml](https://docs.fandogh.cloud/docs/service-manifest.html) file:
+```
+kind: InternalService
+name: example
+spec:
+  image: library/example:${VERSION} ## ${VERSION} must exist in your fandogh.yml file!
+  image_pull_policy: IfNotPresent
+  replicas: 1
+  port_mapping:
+  - port: 50052
+    target_port: 50052
+    protocol: tcp
+  env:
+  - name: GO_ENV
+    value: "production"
+```
