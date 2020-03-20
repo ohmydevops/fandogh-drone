@@ -1,4 +1,6 @@
-# Fandogh-drone
+# fandogh-drone
+
+![Screenshot](shot.png)
 
 If you are using [Drone CI](https://drone.io/) and [Fandogh PaaS](https://fandogh.cloud/), you can use this drone plugin!
 
