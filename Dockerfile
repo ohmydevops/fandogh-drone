@@ -13,7 +13,7 @@ RUN apk upgrade --no-cache \
   && rm -rf /var/cache/* \
   && rm -rf /root/.cache/*
 
-RUN pip3 install fandogh_cli --upgrade
+RUN pip3 install fandogh-cli --upgrade
 
 ADD fandogh.bash /bin/
 RUN chmod +x /bin/fandogh.bash
