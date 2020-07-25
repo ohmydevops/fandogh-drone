@@ -18,6 +18,7 @@ Example for [.drone.yml](https://docs.drone.io/pipeline/docker/overview/):
     password: 
       from_secret: fandoghpass
     version: ${DRONE_COMMIT}
+    registry: "myregistry.com:5000" ## optional
     manifest_path: ./fandogh.yml
 
   when:
@@ -30,7 +31,7 @@ Example for [fandogh.yml](https://docs.fandogh.cloud/docs/service-manifest.html)
 kind: InternalService
 name: example
 spec:
-  image: library/example:${VERSION} ## ${VERSION} must exist in your fandogh.yml file!
+  image: library/image:${VERSION} ## ${VERSION} must exist in your fandogh.yml file.
   image_pull_policy: IfNotPresent
   replicas: 1
   port_mapping:
@@ -41,3 +42,21 @@ spec:
   - name: GO_ENV
     value: "production"
 ```
+
+or if you have custom docker registry:
+```
+kind: InternalService
+name: example
+spec:
+  image: ${REGISTRY}/image:${VERSION} ## ${VERSION} & ${REGISTRY} must exist in your fandogh.yml file!
+  image_pull_policy: IfNotPresent
+  replicas: 1
+  port_mapping:
+  - port: 50052
+    target_port: 50052
+    protocol: tcp
+  env:
+  - name: GO_ENV
+    value: "production"
+```
+
