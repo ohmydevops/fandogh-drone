@@ -14,7 +14,7 @@ RUN apk upgrade --no-cache \
   && rm -rf /var/cache/* \
   && rm -rf /root/.cache/*
 
-RUN pip install fandogh-cli==1.24.1
+RUN pip install fandogh-cli==1.26.0
 RUN pip --version
 
 ADD fandogh.bash /bin/
